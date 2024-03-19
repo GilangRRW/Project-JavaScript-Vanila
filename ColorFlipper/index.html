@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            color: white;
+            text-shadow: -1px 1px 0 #000,
+                1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+        }
+        h2{
+            text-align: center;
+        }
+        .button-box{
+            display: flex;
+            width: 20rem;
+            margin: auto;
+            justify-content: center;
+        }
+        .button-box button{
+            padding: 1rem;
+            margin: 1rem;
+            cursor: pointer;
+        }
+        .range-box{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: auto;
+        }
+        .range-box .range{
+            
+        }
+    </style>
+    <title>Flip collor</title>
+</head>
+<body>
+    <h2>Flip Color</h2>
+    <div class="button-box">
+        <button>Red</button>    
+        <button>Green</button>    
+        <button>Blue</button>    
+    </div>
+    <div class="range-box">
+        <label for="red">Red : <span class="valRed">255</span></label>
+        <input type="range" class="range" value="0" name="red" min="0" max="255">
+        <label for="green">Green : <span class="valGreen">255</span></label>  
+        <input type="range" value="0" class="range" name="green" min="0" max="255">
+        <label for="blue">Blue : <span class="valBlue">255</span></label>  
+        <input type="range" value="0" class="range" name="blue" min="0" max="255">  
+    </div>
+    
+    <script>
+        const button = document.querySelectorAll('.button-box button');
+        const range = document.querySelectorAll('.range');
+        const spanRed = document.querySelector('.valRed');
+        const spanGreen = document.querySelector('.valGreen');
+        const spanBlue = document.querySelector('.valBlue');
+        button.forEach(btn => btn.addEventListener('click', ()=>{
+            document.body.style.backgroundColor = btn.innerText;
+        }))
+
+        range.forEach(r => r.addEventListener('input', (event)=>{
+            document.body.style.backgroundColor = `rgb(${range[0].value},${range[1].value},${range[2].value})`;
+            spanRed.innerText = range[0].value;
+            spanGreen.innerText = range[1].value;
+            spanBlue.innerText = range[2].value;
+        }))
+
+    </script>
+</body>
+</html>

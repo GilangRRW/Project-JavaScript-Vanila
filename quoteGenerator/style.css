@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.header{
+    text-align: center;
+    font-size: xx-large;
+}
+.quote-block{
+    width: 25rem;
+    height: 17rem;
+    background-color:bisque;
+    border-radius: 1.5rem;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.quote-block .quote-text{
+    font-size: x-large;
+    padding: 10px;
+    background-color:antiquewhite;
+    border-radius: 1.5rem;
+}
+.quote-block .quote-author{
+    font-size: medium;
+    font-weight: 100;
+}
+.quote-block .btn{
+    width: 50%;
+    border: none;
+    padding: 10px;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    color:burlywood;
+    text-shadow: 1px 1px 0 #000
+}
+.quote-block .quote-text::before{
+    content: "''";
+}
+.quote-block .quote-text::after{
+    content: "''";
+}

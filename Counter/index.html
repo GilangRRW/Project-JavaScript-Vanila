@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .card-counter{
+            width: 17rem;
+            height: 15rem;
+            background-color: aquamarine;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .button-box button{
+            border: none;
+            background-color: bisque;
+            color:brown;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .button-box button:hover{
+            opacity: 0.8;
+        }
+        .button-box button:active{
+            transform: scale(1.2);
+        }
+    </style>
+    <title>Counter</title>
+</head>
+<body>
+    <div class="card-counter">
+        <h1>Counter</h1>
+        <h2>0</h2>
+        <div class="button-box">
+            <button>Decrease</button>
+            <button>Reset</button>
+            <button>Increase</button>
+        </div>
+    </div>
+    <script>
+        const valueCount = document.querySelector('.card-counter h2');
+        const button = document.querySelectorAll('.button-box button');
+
+        class Counter{
+            constructor(value){
+                this.value = value;
+            }
+            increase(){
+                this.value += 1;
+                valueCount.innerText = this.value;
+            }
+            reset(){
+                this.value = 0;
+                valueCount.innerText = this.value;
+            }
+            decrease(){
+                this.value -= 1;
+                valueCount.innerText = this.value;
+            }
+        }
+        const value = parseInt(valueCount.innerText);
+        const counter = new Counter(value);
+        button.forEach(btn => btn.addEventListener('click', ()=>{
+            if(btn.innerText == 'Increase')counter.increase();
+            if(btn.innerText == 'Decrease')counter.decrease();
+            if(btn.innerText == 'Reset')counter.reset();
+        }))
+    </script>
+</body>
+</html>
