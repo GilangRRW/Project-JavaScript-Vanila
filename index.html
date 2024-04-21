@@ -24,7 +24,7 @@
     <script>
 
         //fetch card project data
-        fetch('projectData.json')
+        fetch('assets/projectData.json')
             .then(response => response.json())
             .then(data => {
                 // Use the fetched data here
@@ -35,22 +35,39 @@
                     const card = document.createElement('div');
                     card.classList.add('col-md-4');
                     card.innerHTML = `
-                        <div class="card">
-                            <img src="${project.image}" class="card-img-top" alt="150x150">
+                        <div class="card mb-3">
+                            <img src="${project.image}" width=200 height=150px class="card-img-top" alt="150x150">
                             <div class="card-body">
                                 <h5 class="card-title">${project.name}</h5>
                                 <p class="card-text">${project.description}</p>
-                                <a href="${project.link}" class="btn btn-primary">Go somewhere</a>
+                                <a href="${project.link}" class="btn btn-primary">Go to project</a>
                             </div>
                         </div>
                     `;
                     cardProject.appendChild(card);
                 });
-            })
-            .catch(error => {
-                // Handle any errors that occur during the fetch
-                console.error(error);
-            });
+            })         
+                .catch(error => {
+                    // Handle any errors that occur during the fetch
+                    console.error(error);
+                    const toast = document.createElement('div');
+                    toast.classList.add('toast');
+                    toast.setAttribute('role', 'alert');
+                    toast.setAttribute('aria-live', 'assertive');
+                    toast.setAttribute('aria-atomic', 'true');
+                    toast.innerHTML = `
+                        <div class="toast-header">
+                            <strong class="me-auto">Error</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            An error occurred while fetching project data. Please try again later.
+                        </div>
+                    `;
+                    document.body.appendChild(toast);
+                    const toastInstance = new bootstrap.Toast(toast);
+                    toastInstance.show();
+                });
         
 
     </script>
