@@ -40,7 +40,7 @@
         "image": "assets/upload-with-dom.png",
         "author": "Gilang Rizki",
         "description": "A project using vanilla JavaScript. This project is a simple file uploader that uploads files using the DOM API.",
-        "link": "https://gilangrrw.github.io/Project-JavaScript-Vanila/uploadWithDOM/",
+        "link": "https://gilangrrw.github.io/Project-JavaScript-Vanila/uploadWithDom/",
         "version": "1.0",
         "license": "MIT"
     }
