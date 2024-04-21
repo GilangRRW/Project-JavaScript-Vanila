@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Calculator",
+        "image": "assets/calculator.png",
+        "author": "Gilang Rizki",
+        "description": "A project using vanilla JavaScript. This project is a simple calculator that performs basic arithmetic operations.",
+        "link": "https://gilangrrw.github.io/Project-JavaScript-Vanila/Calculator/",
+        "version": "1.0",
+        "license": "MIT"
+    },
+    {
+        "name": "Color Flipper",
+        "image": "assets/color-flipper.png",
+        "author": "Gilang Rizki",
+        "description": "A project using vanilla JavaScript. This project is a simple color flipper that generates random colors.",
+        "link": "https://gilangrrw.github.io/Project-JavaScript-Vanila/ColorFlipper/",
+        "version": "1.0",
+        "license": "MIT"
+    },
+    {
+        "name": "Counter",
+        "image": "assets/counter.png",
+        "author": "Gilang Rizki",
+        "description": "A project using vanilla JavaScript. This project is a simple counter that increments and decrements a number.",
+        "link": "https://gilangrrw.github.io/Project-JavaScript-Vanila/Counter/",
+        "version": "1.0",
+        "license": "MIT"
+    },
+    {
+        "name": "Quotes Generator",
+        "image": "assets/quotes-generator.png",
+        "author": "Gilang Rizki",
+        "description": "A project using vanilla JavaScript. This project is a simple quotes generator that displays random quotes.",
+        "link": "https://gilangrrw.github.io/Project-JavaScript-Vanila/quoteGenerator/",
+        "version": "1.0",
+        "license": "MIT"
+    },
+    {
+        "name": "uploadWithDOM",
+        "image": "assets/upload-with-dom.png",
+        "author": "Gilang Rizki",
+        "description": "A project using vanilla JavaScript. This project is a simple file uploader that uploads files using the DOM API.",
+        "link": "https://gilangrrw.github.io/Project-JavaScript-Vanila/uploadWithDOM/",
+        "version": "1.0",
+        "license": "MIT"
+    }
+]
